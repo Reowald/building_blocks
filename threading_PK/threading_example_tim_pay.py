@@ -16,6 +16,7 @@ class myThread(threading.Thread):
         threadLock.release()
         print("Exiting: " + self.name + "\n")
 
+
 class myThread2(threading.Thread):
     def __init__(self, threadId, name, count):
         threading.Thread.__init__(self)
@@ -44,11 +45,12 @@ thread1 = myThread(1, "Payment", 5)
 thread2 = myThread2(2, "Sending Email", 10)
 thread3 = myThread2(3, "Loading Page", 3)
 
-
 thread1.start()
 thread2.start()
 thread3.start()
+
 thread1.join()
 thread2.join()
 thread3.join()
+
 print("Done main thread")

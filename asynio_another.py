@@ -17,8 +17,8 @@ class Demo:
             await asyncio.sleep(0.1)
 
 
-# loop = asyncio.get_event_loop()
-# d = Demo()
-# loop.create_task(d.one())
-# loop.create_task(d.two())
-# loop.run_forever()
+loop = asyncio.get_event_loop()
+d = Demo()
+loop.create_task(d.one())
+loop.create_task(d.two())
+loop.run_forever()
